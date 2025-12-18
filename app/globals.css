@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-slate-950 text-slate-100 font-sans antialiased;
+    color-scheme: dark;
+  }
+
+  /* Scrollbar Styling */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-950;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-blue-600 rounded-full hover:bg-blue-500 transition-colors;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-blue-500;
+  }
+
+  /* Firefox Scrollbar */
+  * {
+    scrollbar-color: rgb(37, 99, 235) rgb(15, 23, 42);
+    scrollbar-width: thin;
+  }
+
+  /* Smooth transitions */
+  a {
+    @apply transition-colors duration-300;
+  }
+
+  button {
+    @apply transition-all duration-300;
+  }
+}
+
+@layer components {
+  /* Blue accent link styling */
+  .link-blue {
+    @apply text-blue-500 hover:text-blue-400 transition-colors duration-300;
+  }
+
+  /* Dark theme card styling */
+  .card-dark {
+    @apply bg-slate-900 border border-slate-800 rounded-lg p-6 shadow-lg hover:shadow-xl hover:border-blue-600 transition-all duration-300;
+  }
+
+  /* Blue accent button */
+  .btn-blue {
+    @apply bg-blue-600 hover:bg-blue-500 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300 active:bg-blue-700;
+  }
+
+  /* Secondary dark button */
+  .btn-secondary {
+    @apply bg-slate-800 hover:bg-slate-700 text-slate-100 font-medium py-2 px-4 rounded-lg transition-colors duration-300 border border-slate-700;
+  }
+
+  /* Gradient text with blue accent */
+  .gradient-blue {
+    @apply bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent;
+  }
+}
+
+@layer utilities {
+  /* Dark theme utilities */
+  .dark-bg {
+    @apply bg-slate-950;
+  }
+
+  .dark-card {
+    @apply bg-slate-900;
+  }
+
+  /* Blue accent utilities */
+  .accent-blue {
+    @apply text-blue-500;
+  }
+
+  .accent-blue-hover {
+    @apply hover:text-blue-400;
+  }
+
+  .border-blue-accent {
+    @apply border-blue-600;
+  }
+
+  /* Focus utilities with blue accent */
+  .focus-blue {
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-950;
+  }
+
+  /* Subtle shadow utilities */
+  .shadow-blue-sm {
+    @apply shadow-md shadow-blue-600/10;
+  }
+
+  .shadow-blue-lg {
+    @apply shadow-lg shadow-blue-600/20;
+  }
+}
